@@ -13,7 +13,21 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    script: [
+      {
+        src: "/js/core/jquery.min.js",
+        body: true
+      },
+      {
+        src: "/js/codebase.app.min.js",
+        body: true
+      },
+      {
+        src: "/js/codebase.core.min.js",
+        body: true
+      },
+    ],
   },
   /*
   ** Customize the progress-bar color
@@ -23,7 +37,7 @@ export default {
   ** Global CSS
   */
   css: [
-    '@/assets/css/codebase.css',
+    '@/assets/css/codebase.min.css',
   ],
   /*
   ** Plugins to load before mounting the App
