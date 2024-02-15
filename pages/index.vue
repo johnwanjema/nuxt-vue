@@ -47,3 +47,40 @@
       </main>
   </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            // form: new Form({
+            //     username:'',
+            //     password:'',
+            // }),
+        }
+    },
+    // watch: {
+    //     currentPage: {
+    //         handler: function(value) {
+    //             this.getAFHSMessages(value)
+    //         }
+    //     }
+    // },
+    methods: {
+        login() {
+            axios.get('/api/afhs').then(({ data }) => {
+                this.afhs = data.data;
+                if (data.data.length > 0) { 
+                    this.form.afh_id = data.data[0].id;
+                    this.getAFHStaff();
+                    this.getAFHSMessages();
+                }
+            }).catch((error) => {
+                console.log(error);
+            });
+        },
+    },
+    created() {
+      console.log('users')
+    }
+}
+</script>

@@ -10,7 +10,7 @@
                           <div class="simplebar-content" style="padding: 0px;">
                               <div class="content-header">
                                   <a class="img-link me-2" href="be_pages_generic_profile.html">
-                                      <img class="img-avatar img-avatar32" src="assets/media/avatars/avatar15.jpg" alt="" />
+                                      <img class="img-avatar img-avatar32" src="../assets/media/avatars/avatar15.jpg" alt="" />
                                   </a>
                                   <a class="link-fx text-body-color-dark fw-semibold fs-sm" href="be_pages_generic_profile.html">
                                       John Smith
@@ -64,7 +64,7 @@
                                           <ul class="nav-users">
                                               <li>
                                                   <a href="be_pages_generic_profile.html">
-                                                      <img class="img-avatar" src="assets/media/avatars/avatar5.jpg" alt="" />
+                                                      <img class="img-avatar" src="../assets/media/avatars/avatar5.jpg" alt="" />
                                                       <i class="fa fa-circle text-success"></i>
                                                       <div>Andrea Gardner</div>
                                                       <div class="fw-normal fs-xs text-muted">Photographer</div>
@@ -72,7 +72,7 @@
                                               </li>
                                               <li>
                                                   <a href="be_pages_generic_profile.html">
-                                                      <img class="img-avatar" src="assets/media/avatars/avatar14.jpg" alt="" />
+                                                      <img class="img-avatar" src="../assets/media/avatars/avatar14.jpg" alt="" />
                                                       <i class="fa fa-circle text-success"></i>
                                                       <div>Thomas Riley</div>
                                                       <div class="fw-normal fs-xs text-muted">Web Designer</div>
@@ -80,7 +80,7 @@
                                               </li>
                                               <li>
                                                   <a href="be_pages_generic_profile.html">
-                                                      <img class="img-avatar" src="assets/media/avatars/avatar3.jpg" alt="" />
+                                                      <img class="img-avatar" src="../assets/media/avatars/avatar3.jpg" alt="" />
                                                       <i class="fa fa-circle text-warning"></i>
                                                       <div>Danielle Jones</div>
                                                       <div class="fw-normal fs-xs text-muted">UI Designer</div>
@@ -88,7 +88,7 @@
                                               </li>
                                               <li>
                                                   <a href="be_pages_generic_profile.html">
-                                                      <img class="img-avatar" src="assets/media/avatars/avatar10.jpg" alt="" />
+                                                      <img class="img-avatar" src="../assets/media/avatars/avatar10.jpg" alt="" />
                                                       <div>Jack Greene</div>
                                                       <div class="fw-normal fs-xs text-muted">Copywriter</div>
                                                   </a>
@@ -301,11 +301,11 @@
                                   <div class="simplebar-content" style="padding: 0px;">
                                       <div class="content-side content-side-user px-0 py-0">
                                           <div class="smini-visible-block animated fadeIn px-3">
-                                              <img class="img-avatar img-avatar32" src="assets/media/avatars/avatar15.jpg" alt="" />
+                                              <img class="img-avatar img-avatar32" src="../assets/media/avatars/avatar15.jpg" alt="" />
                                           </div>
                                           <div class="smini-hidden text-center mx-auto">
                                               <a class="img-link" href="be_pages_generic_profile.html">
-                                                  <img class="img-avatar" src="assets/media/avatars/avatar15.jpg" alt="" />
+                                                  <img class="img-avatar" src="../assets/media/avatars/avatar15.jpg" alt="" />
                                               </a>
                                               <ul class="list-inline mt-3 mb-0">
                                                   <li class="list-inline-item">
