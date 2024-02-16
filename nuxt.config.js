@@ -1,6 +1,6 @@
 
 export default {
-  mode: 'universal',
+  // mode: 'universal',
   /*
   ** Headers of the page
   */
@@ -53,6 +53,7 @@ export default {
   */
   buildModules: [
   ],
+  buildDir: 'nuxt-dist', 
   /*
   ** Nuxt.js modules
   */
