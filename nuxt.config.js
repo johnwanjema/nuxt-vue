@@ -38,11 +38,15 @@ export default {
   */
   css: [
     '@/assets/css/codebase.min.css',
+    '@/assets/css/codebase.min.css',
+    // 'bootstrap/dist/css/bootstrap.css',
+    // 'bootstrap-vue/dist/bootstrap-vue.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/bootstrap-vue.js', ssr: true }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -53,7 +57,28 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxt/http'
   ],
+
+
+  http: {
+    baseURL: 'https://apptest.dekioz.co.ke/api', // Set your API base URL here
+    // You can also configure other options for the http module if needed
+
+    // Add an interceptor to modify headers
+    // interceptors: {
+    //   request: {
+    //     onBefore({ method, headers }) {
+    //       const accessToken = localStorage.getItem('accessToken');
+    //       if (accessToken) {
+    //         headers.set('Authorization', `Bearer ${accessToken}`);
+    //       }
+    //       return { method, headers };
+    //     },
+    //   },
+    // },
+  },
+
   /*
   ** Build configuration
   */
