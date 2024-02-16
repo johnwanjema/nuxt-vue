@@ -53,7 +53,6 @@ export default {
   */
   buildModules: [
   ],
-  buildDir: 'nuxt-dist', 
   /*
   ** Nuxt.js modules
   */
