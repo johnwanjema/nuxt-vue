@@ -65,25 +65,20 @@
             return {
                 username: "",
                 password: "",
-                ip: "",
             };
         },
-        // watch: {
-        //     currentPage: {
-        //         handler: function(value) {
-        //             this.getAFHSMessages(value)
-        //         }
-        //     }
-        // },÷
         methods: {
-            async login() {
+             async login() {
                 await this.$http
                     .$post("https://apptest.dekioz.co.ke/api/Auth/login", {
                         user: this.username,
                         password: this.password,
                     })
                     .then((response) => {
-                        console.log(response.accessToken);
+                        this.$http.setHeader(
+                            "Authorization",
+                            `Bearer ${response.accessToken}`
+                        );
                     })
                     .catch((error) => {
                         console.log(error);
