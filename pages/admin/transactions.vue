@@ -71,7 +71,7 @@
                 perPage: 5,
                 transactions:[],
                 currentPage: 1,
-                fields: ['#',,'transactionId', 'mName','destinationAccount','amount','resellerCommission','currentBalance','status','date', { key: 'actions', label: 'Actions' }],
+                fields: ['#',,'transactionId', {key:'mName',label:'Name'}, {key:'destinationAccount',label:'To Acc'}, {key:'amount',label:'Amt'}, {key:'resellerCommission',label:'Comm'},'status','date', { key: 'actions', label: 'Actions' }],
                 filter: null,
                 filterOn: [],
                 totalRows: 1,
