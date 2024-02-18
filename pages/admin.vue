@@ -24,9 +24,8 @@
 
                       <!-- Logo -->
                       <div class="content-header-item">
-                          <a class="link-effect font-w700" href="index.html">
-                              <i class="si si-fire text-primary"></i>
-                              <span class="font-size-xl text-dual-primary-dark">code</span><span class="font-size-xl text-primary">base</span>
+                          <a class="link-effect font-w700" href="#">
+                              <span class="font-size-xl text-dual-primary-dark">Kredo</span><span class="font-size-xl text-primary">Iko</span>
                           </a>
                       </div>
                       <!-- END Logo -->
@@ -45,12 +44,12 @@
 
                   <!-- Visible only in normal mode -->
                   <div class="sidebar-mini-hidden-b text-center">
-                      <a class="img-link" href="be_pages_generic_profile.html">
+                      <a class="img-link" href="#">
                           <img class="img-avatar" :src="require('@/assets/media/avatars/avatar15.jpg')" alt="" />
                       </a>
                       <ul class="list-inline mt-10">
                           <li class="list-inline-item">
-                              <a class="link-effect text-dual-primary-dark font-size-sm font-w600 text-uppercase" href="be_pages_generic_profile.html">J. Smith</a>
+                              <a class="link-effect text-dual-primary-dark font-size-sm font-w600 text-uppercase" href="#">J. Smith</a>
                           </li>
                           <li class="list-inline-item">
                               <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
@@ -59,7 +58,7 @@
                               </a>
                           </li>
                           <li class="list-inline-item">
-                              <a class="link-effect text-dual-primary-dark" href="op_auth_signin.html">
+                              <a class="link-effect text-dual-primary-dark" href="#">
                                   <i class="si si-logout"></i>
                               </a>
                           </li>
@@ -72,11 +71,15 @@
               <!-- Side Navigation -->
               <div class="content-side content-side-full">
                   <ul class="nav-main">
+                    <!-- <i class="fas fa-tachometer-alt"></i> -->
                       <li>
-                          <NuxtLink class="active" to="/admin/dashboard"><i class="si si-cup"></i><span class="sidebar-mini-hide">Dashboard</span></NuxtLink>
+                          <NuxtLink class="active" to="/admin/dashboard"><i class="si si-bar-chart"></i><span class="sidebar-mini-hide">Dashboard</span></NuxtLink>
                       </li>
                       <li>
-                          <NuxtLink class="active" to="/admin/Transactions"><i class="si si-cup"></i><span class="sidebar-mini-hide">Transactions</span></NuxtLink>
+                          <NuxtLink class="active" to="/admin/transactions"><i class="si si-list"></i><span class="sidebar-mini-hide">Transactions</span></NuxtLink>
+                      </li>
+                      <li>
+                          <NuxtLink class="active" to="/admin/Transactions"><i class="si si-logout"></i><span class="sidebar-mini-hide">Log out</span></NuxtLink>
                       </li>
                   </ul>
               </div>
@@ -89,65 +92,6 @@
                   <button type="button" class="btn btn-sm btn-alt-secondary" data-toggle="layout" data-action="sidebar_toggle">
                       <i class="fa fa-fw fa-bars"></i>
                   </button>
-                  <button type="button" class="btn btn-sm btn-alt-secondary" data-toggle="layout" data-action="header_search_on">
-                      <i class="fa fa-fw fa-search"></i>
-                  </button>
-                  <div class="dropdown d-inline-block">
-                      <button type="button" class="btn btn-sm btn-alt-secondary" id="page-header-themes-dropdown" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
-                          <i class="fa fa-fw fa-wrench"></i>
-                      </button>
-                      <div class="dropdown-menu dropdown-menu-lg p-0" aria-labelledby="page-header-themes-dropdown">
-                          <div class="p-3 bg-body-light rounded-top">
-                              <h5 class="h6 text-center mb-0">
-                                  Color Themes
-                              </h5>
-                          </div>
-                          <div class="p-3">
-                              <div class="row g-0 text-center">
-                                  <div class="col-2">
-                                      <a class="text-default active" data-toggle="theme" data-theme="default" href="javascript:void(0)">
-                                          <i class="fa fa-2x fa-circle"></i>
-                                      </a>
-                                  </div>
-                                  <div class="col-2">
-                                      <a class="text-elegance" data-toggle="theme" data-theme="assets/css/themes/elegance.min-5.7.css" href="javascript:void(0)">
-                                          <i class="fa fa-2x fa-circle"></i>
-                                      </a>
-                                  </div>
-                                  <div class="col-2">
-                                      <a class="text-pulse" data-toggle="theme" data-theme="assets/css/themes/pulse.min-5.7.css" href="javascript:void(0)">
-                                          <i class="fa fa-2x fa-circle"></i>
-                                      </a>
-                                  </div>
-                                  <div class="col-2">
-                                      <a class="text-flat" data-toggle="theme" data-theme="assets/css/themes/flat.min-5.7.css" href="javascript:void(0)">
-                                          <i class="fa fa-2x fa-circle"></i>
-                                      </a>
-                                  </div>
-                                  <div class="col-2">
-                                      <a class="text-corporate" data-toggle="theme" data-theme="assets/css/themes/corporate.min-5.7.css" href="javascript:void(0)">
-                                          <i class="fa fa-2x fa-circle"></i>
-                                      </a>
-                                  </div>
-                                  <div class="col-2">
-                                      <a class="text-earth" data-toggle="theme" data-theme="assets/css/themes/earth.min-5.7.css" href="javascript:void(0)">
-                                          <i class="fa fa-2x fa-circle"></i>
-                                      </a>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="p-3 bg-body-light rounded-bottom">
-                              <div class="row g-sm text-center">
-                                  <div class="col-6">
-                                      <a class="dropdown-item fs-sm fw-medium mb-0" href="be_layout_api.html"> <i class="fa fa-flask opacity-50 me-1"></i> Layout API </a>
-                                  </div>
-                                  <div class="col-6">
-                                      <a class="dropdown-item fs-sm fw-medium mb-0" href="be_ui_color_themes.html"> <i class="fa fa-paint-brush opacity-50 me-1"></i> Themes </a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
               </div>
               <div class="space-x-1">
                   <div class="dropdown d-inline-block">
@@ -163,7 +107,7 @@
                               </h5>
                           </div>
                           <div class="p-2">
-                              <a class="dropdown-item d-flex align-items-center justify-content-between space-x-1" href="be_pages_generic_profile.html">
+                              <a class="dropdown-item d-flex align-items-center justify-content-between space-x-1" href="#">
                                   <span>Profile</span>
                                   <i class="fa fa-fw fa-user opacity-25"></i>
                               </a>
@@ -261,24 +205,6 @@
                           </div>
                       </div>
                   </div>
-                  <button type="button" class="btn btn-sm btn-alt-secondary" data-toggle="layout" data-action="side_overlay_toggle">
-                      <i class="fa fa-fw fa-stream"></i>
-                  </button>
-              </div>
-          </div>
-          <div id="page-header-search" class="overlay-header bg-body-extra-light">
-              <div class="content-header">
-                  <form class="w-100" action="be_pages_generic_search.html" method="POST">
-                      <div class="input-group">
-                          <button type="button" class="btn btn-secondary" data-toggle="layout" data-action="header_search_off">
-                              <i class="fa fa-fw fa-times"></i>
-                          </button>
-                          <input type="text" class="form-control" placeholder="Search or hit ESC.." id="page-header-search-input" name="page-header-search-input" />
-                          <button type="submit" class="btn btn-secondary">
-                              <i class="fa fa-fw fa-search"></i>
-                          </button>
-                      </div>
-                  </form>
               </div>
           </div>
           <div id="page-header-loader" class="overlay-header bg-primary">
@@ -292,15 +218,5 @@
       <main id="main-container">
           <NuxtChild />
       </main>
-      <footer id="page-footer">
-          <div class="content py-3">
-              <div class="row fs-sm">
-                  <div class="col-sm-6 order-sm-2 py-1 text-center text-sm-end">Crafted with <i class="fa fa-heart text-danger"></i> by <a class="fw-semibold" href="https://pixelcave.com" target="_blank">pixelcave</a></div>
-                  <div class="col-sm-6 order-sm-1 py-1 text-center text-sm-start">
-                      <a class="fw-semibold" href="https://pixelcave.com/products/codebase" target="_blank">Codebase 5.7</a> © <span data-toggle="year-copy" class="js-year-copy-enabled">2024</span>
-                  </div>
-              </div>
-          </div>
-      </footer>
   </div>
 </template>
