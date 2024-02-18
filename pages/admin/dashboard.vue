@@ -153,64 +153,6 @@
         </div>
         <!-- END Row #2 -->
     </div>
-    <div class="row js-appear-enabled animated fadeIn" data-toggle="appear">
-        <!-- Row #3 -->
-        <div class="col-md-4">
-            <div class="block">
-                <div class="block-content block-content-full">
-                    <div class="py-20 text-center">
-                        <div class="mb-20">
-                            <i class="fa fa-envelope-open fa-4x text-primary"></i>
-                        </div>
-                        <div class="font-size-h4 font-w600">9.25k Subscribers</div>
-                        <div class="text-muted">Your main list is growing!</div>
-                        <div class="pt-20">
-                            <a class="btn btn-rounded btn-alt-primary" href="javascript:void(0)">
-                                <i class="fa fa-cog mr-5"></i> Manage list
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="block">
-                <div class="block-content block-content-full">
-                    <div class="py-20 text-center">
-                        <div class="mb-20">
-                            <i class="fa fa-twitter fa-4x text-info"></i>
-                        </div>
-                        <div class="font-size-h4 font-w600">+36 followers</div>
-                        <div class="text-muted">You are doing great!</div>
-                        <div class="pt-20">
-                            <a class="btn btn-rounded btn-alt-info" href="javascript:void(0)">
-                                <i class="fa fa-users mr-5"></i> Check them out
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="block">
-                <div class="block-content block-content-full">
-                    <div class="py-20 text-center">
-                        <div class="mb-20">
-                            <i class="fa fa-check fa-4x text-success"></i>
-                        </div>
-                        <div class="font-size-h4 font-w600">Business Plan</div>
-                        <div class="text-muted">This is your current active plan</div>
-                        <div class="pt-20">
-                            <a class="btn btn-rounded btn-alt-success" href="javascript:void(0)">
-                                <i class="fa fa-arrow-up mr-5"></i> Upgrade to VIP
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- END Row #3 -->
-    </div>
 </div>
 <!-- END Page Content -->
 
