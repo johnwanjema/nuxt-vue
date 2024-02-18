@@ -75,10 +75,15 @@
                         password: this.password,
                     })
                     .then((response) => {
-                        this.$http.setHeader(
-                            "Authorization",
-                            `Bearer ${response.accessToken}`
-                        );
+                        if (response.hasOwnProperty('accessToken')) {
+                            this.$http.setHeader(
+                                "Authorization",
+                                `Bearer ${response.accessToken}`
+                            );
+                            this.$router.push('/admin/dashboard');
+                        } else {
+                            alert('Invalid credentials')
+                        }
                     })
                     .catch((error) => {
                         console.log(error);
