@@ -80,7 +80,7 @@
                                 "Authorization",
                                 `Bearer ${response.accessToken}`
                             );
-                            this.$router.push('/admin/dashboard');
+                            this.$router.push('/admin/transactions');
                         } else {
                             alert('Invalid credentials')
                         }
