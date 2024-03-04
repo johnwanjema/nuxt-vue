@@ -72,9 +72,9 @@
               <div class="content-side content-side-full">
                   <ul class="nav-main">
                     <!-- <i class="fas fa-tachometer-alt"></i> -->
-                      <li>
+                      <!-- <li>
                           <NuxtLink class="active" to="/admin/dashboard"><i class="si si-bar-chart"></i><span class="sidebar-mini-hide">Dashboard</span></NuxtLink>
-                      </li>
+                      </li> -->
                       <li>
                           <NuxtLink class="active" to="/admin/transactions"><i class="si si-list"></i><span class="sidebar-mini-hide">Transactions</span></NuxtLink>
                       </li>
