@@ -79,7 +79,7 @@
                           <NuxtLink class="active" to="/admin/transactions"><i class="si si-list"></i><span class="sidebar-mini-hide">Transactions</span></NuxtLink>
                       </li>
                       <li>
-                          <NuxtLink class="active" to="/admin/Transactions"><i class="si si-logout"></i><span class="sidebar-mini-hide">Log out</span></NuxtLink>
+                          <NuxtLink class="active" to="/"><i class="si si-logout"></i><span class="sidebar-mini-hide">Log out</span></NuxtLink>
                       </li>
                   </ul>
               </div>
