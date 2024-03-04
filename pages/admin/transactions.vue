@@ -5,6 +5,8 @@
         <div class="block">
             <div class="block-header block-header-default">
                 <h3 class="block-title">Transactions</h3>
+                <b-pagination v-model="currentPage" :total-rows="totalRows" :per-page="perPage" aria-controls="my-table"></b-pagination>
+
             </div>
             <div class="block-content block-content-full">
                 <!-- DataTables functionality is initialized with .js-dataTable-full class in js/pages/be_tables_datatables.min.js which was auto compiled from _es6/pages/be_tables_datatables.js -->
@@ -36,6 +38,9 @@
                             <template v-slot:cell(#)="row">
                                 <p>{{row.index + 1}}</p>
                             </template>
+                            <template v-slot:cell(date)="row">
+                                        <p>{{row.item.date | filterDate}}</p>
+                                    </template>
                             <template v-slot:cell(actions)="row">
                                 <router-link :to="'#'" class="btn btn-sm btn-primary"  >
                                     Edit
@@ -68,7 +73,7 @@
                 username: "",
                 password: "",
                 ip: "",
-                perPage: 5,
+                perPage:50 ,
                 transactions:[],
                 currentPage: 1,
                 fields: ['#',,'transactionId', {key:'mName',label:'Name'}, {key:'destinationAccount',label:'To Acc'}, {key:'amount',label:'Amt'}, {key:'resellerCommission',label:'Comm'},'status','date', { key: 'actions', label: 'Actions' }],
@@ -80,7 +85,7 @@
         watch: {
             currentPage: {
                 handler: function(value) {
-                    this.getAFH(value)
+                    // this.getAFH(value)
                 }
             }
         },
@@ -90,11 +95,13 @@
             this.currentPage = 1
         },
             async getTransactions() {
-                console.log(this.$http);
                 await this.$http
-                    .$get("/Transaction/GetAllTransactionsPagedSorted?PageSize="+this.perPage)
+                    .$get("/Transaction/GetAllTransactionsPagedSorted")
                     .then((response) => {
                         this.transactions = response;
+                        console.log(response);
+                        console.log(this.transactions.length);
+                        this.totalRows = this.transactions.length;
                     })
                     .catch((error) => {
                         console.log(error);

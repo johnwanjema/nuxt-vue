@@ -46,7 +46,9 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/bootstrap-vue.js', ssr: true }
+    { src: '~/plugins/bootstrap-vue.js', ssr: true },
+    '~/plugins/http.js',
+    '~/plugins/date.js'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -57,7 +59,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxt/http'
+    '@nuxt/http',
   ],
 
 
