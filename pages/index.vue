@@ -8,11 +8,10 @@
                     <!-- Header -->
                     <div class="py-30 px-5 text-center">
                         <a class="link-effect font-w700" href="index.html">
-                            <i class="si si-fire"></i>
-                            <span class="font-size-xl text-primary-dark">code</span><span class="font-size-xl">base</span>
+                            <span class="font-size-xl text-primary-dark">KredoIko</span>
                         </a>
-                        <h1 class="h2 font-w700 mt-50 mb-10">Welcome to Your Dashboard</h1>
-                        <h2 class="h4 font-w400 text-muted mb-0">Please sign in</h2>
+                        <h1 class="h2 font-w700 mt-50 mb-10">Welcome</h1>
+                        <h2 class="h4 font-w400 text-muted mb-0">Sign In</h2>
                     </div>
                     <!-- END Header -->
 
@@ -22,7 +21,7 @@
                             <form @submit.prevent="login">
                                 <div class="form-group row">
                                     <div class="col-12">
-                                        <div class="form-material floating">
+                                        <div class="form-material">
                                             <input v-model="username" required type="text" class="form-control" id="login-username" name="login-username" />
                                             <label for="login-username">Username</label>
                                         </div>
@@ -30,7 +29,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-12">
-                                        <div class="form-material floating">
+                                        <div class="form-material">
                                             <input v-model="password" required type="password" class="form-control" id="login-password" name="login-password" />
                                             <label for="login-password">Password</label>
                                         </div>
@@ -39,12 +38,6 @@
                                 <div class="form-group row gutters-tiny">
                                     <div class="col-12 mb-10">
                                         <button type="submit" class="btn btn-block btn-hero btn-noborder btn-rounded btn-alt-primary"><i class="si si-login mr-10"></i> Sign In</button>
-                                    </div>
-                                    <div class="col-sm-6 mb-5">
-                                        <a class="btn btn-block btn-noborder btn-rounded btn-alt-secondary" href="op_auth_signup.html"> <i class="fa fa-plus text-muted mr-5"></i> New Account </a>
-                                    </div>
-                                    <div class="col-sm-6 mb-5">
-                                        <a class="btn btn-block btn-noborder btn-rounded btn-alt-secondary" href="op_auth_reminder.html"> <i class="fa fa-warning text-muted mr-5"></i> Forgot password </a>
                                     </div>
                                 </div>
                             </form>
@@ -76,11 +69,13 @@
                     })
                     .then((response) => {
                         if (response.hasOwnProperty('accessToken')) {
-                            this.$http.setHeader(
-                                "Authorization",
-                                `Bearer ${response.accessToken}`
-                            );
-                            this.$router.push('/admin/transactions');
+                            localStorage.setItem('accessToken', response.accessToken);
+                            // this.$http.setHeader(
+                            //     "Authorization",
+                            //     `Bearer ${response.accessToken}`
+                            // );
+                            // this.$router.push('/admin/transactions');
+                            window.location.href = '/admin/transactions';
                         } else {
                             alert('Invalid credentials')
                         }

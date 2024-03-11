@@ -47,22 +47,7 @@
                       <a class="img-link" href="#">
                           <img class="img-avatar" :src="require('@/assets/media/avatars/avatar15.jpg')" alt="" />
                       </a>
-                      <ul class="list-inline mt-10">
-                          <li class="list-inline-item">
-                              <a class="link-effect text-dual-primary-dark font-size-sm font-w600 text-uppercase" href="#">J. Smith</a>
-                          </li>
-                          <li class="list-inline-item">
-                              <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                              <a class="link-effect text-dual-primary-dark" data-toggle="layout" data-action="sidebar_style_inverse_toggle" href="javascript:void(0)">
-                                  <i class="si si-drop"></i>
-                              </a>
-                          </li>
-                          <li class="list-inline-item">
-                              <a class="link-effect text-dual-primary-dark" href="#">
-                                  <i class="si si-logout"></i>
-                              </a>
-                          </li>
-                      </ul>
+                      
                   </div>
                   <!-- END Visible only in normal mode -->
               </div>
@@ -79,7 +64,7 @@
                           <NuxtLink class="active" to="/admin/transactions"><i class="si si-list"></i><span class="sidebar-mini-hide">Transactions</span></NuxtLink>
                       </li>
                       <li>
-                          <NuxtLink class="active" to="/"><i class="si si-logout"></i><span class="sidebar-mini-hide">Log out</span></NuxtLink>
+                          <router-link @click="btnClick()" class="active" to="/"><i class="si si-logout"></i><span class="sidebar-mini-hide">Log Out</span></router-link>
                       </li>
                   </ul>
               </div>
@@ -220,3 +205,19 @@
       </main>
   </div>
 </template>
+
+<script>
+    export default {
+        data() {
+            return {
+                username: "",
+                password: "",
+            };
+        },
+        methods: {
+            btnClick() {
+                localStorage.removeItem('accessToken');
+            },
+        },
+    };
+</script>
