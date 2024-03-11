@@ -41,8 +41,8 @@
                                 <p>{{row.item.date | filterDate}}</p>
                             </template>
                             <template v-slot:cell(actions)="row">
-                                <router-link :to="'/admin/transactions/' +row.item.id" class="btn btn-sm btn-primary"  >
-                                    Edit
+                                <router-link :to="'/admin/transactions/' +row.item.id" class="btn btn-sm btn-info"  >
+                                    View
                                 </router-link>
                             </template>
                             </b-table>
