@@ -41,10 +41,9 @@
                                 <p>{{row.item.date | filterDate}}</p>
                             </template>
                             <template v-slot:cell(actions)="row">
-                                <router-link :to="'#'" class="btn btn-sm btn-primary"  >
+                                <router-link :to="'/admin/transactions/' +row.item.id" class="btn btn-sm btn-primary"  >
                                     Edit
                                 </router-link>
-                                <button class="btn btn-sm btn-danger">Delete</button>
                             </template>
                             </b-table>
                         </div>
