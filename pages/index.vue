@@ -69,6 +69,7 @@
                     })
                     .then((response) => {
                         if (response.hasOwnProperty('accessToken')) {
+                            localStorage.setItem('accessToken', response.accessToken);
                             // this.$http.setHeader(
                             //     "Authorization",
                             //     `Bearer ${response.accessToken}`
