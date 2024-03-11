@@ -1,15 +1,13 @@
 <template>
     <div class="content">
-        <!-- <h2 class="content-heading">Transactions</h2> -->
-        <!-- Dynamic Table Full -->
         <div class="block">
             <div class="block-header block-header-default">
                 <h3 class="block-title">Transactions</h3>
-                <b-pagination v-model="currentPage" :total-rows="totalRows" :per-page="perPage" aria-controls="my-table"></b-pagination>
-
+                <nuxt-link to="/admin/transactions/new">
+                    <button class="btn btn-primary">Add New</button>
+                </nuxt-link>
             </div>
             <div class="block-content block-content-full">
-                <!-- DataTables functionality is initialized with .js-dataTable-full class in js/pages/be_tables_datatables.min.js which was auto compiled from _es6/pages/be_tables_datatables.js -->
                 <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                     <div class="row">
                         <div class="col-sm-12 col-md-6">
@@ -21,6 +19,7 @@
                                         <option value="8">8</option>
                                         <option value="15">15</option>
                                         <option value="20">20</option>
+                                        <option value="50">50</option>
                                     </select>
                                     entries
                                 </label>
@@ -39,16 +38,13 @@
                                 <p>{{row.index + 1}}</p>
                             </template>
                             <template v-slot:cell(date)="row">
-                                        <p>{{row.item.date | filterDate}}</p>
-                                    </template>
+                                <p>{{row.item.date | filterDate}}</p>
+                            </template>
                             <template v-slot:cell(actions)="row">
                                 <router-link :to="'#'" class="btn btn-sm btn-primary"  >
                                     Edit
                                 </router-link>
-                                <router-link :to="'#'" class="btn btn-sm btn-info"  >
-                                    View
-                                </router-link>
-                                <!-- <button @click="deleteAfh(row.item)" class="btn btn-sm btn-danger"> Delete</button> -->
+                                <button class="btn btn-sm btn-danger">Delete</button>
                             </template>
                             </b-table>
                         </div>
@@ -73,10 +69,10 @@
                 username: "",
                 password: "",
                 ip: "",
-                perPage:50 ,
+                perPage:5 ,
                 transactions:[],
                 currentPage: 1,
-                fields: ['#',,'transactionId', {key:'mName',label:'Name'}, {key:'destinationAccount',label:'To Acc'}, {key:'amount',label:'Amt'}, {key:'resellerCommission',label:'Comm'},'status','date', { key: 'actions', label: 'Actions' }],
+                fields: ['#',,'transactionId','date', {key:'mName',label:'Name'}, {key:'destinationAccount',label:'To Acc'}, {key:'amount',label:'Amt'}, {key:'resellerCommission',label:'Comm'},'status', { key: 'actions', label: 'Actions' }],
                 filter: null,
                 filterOn: [],
                 totalRows: 1,
